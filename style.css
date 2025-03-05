@@ -1,0 +1,247 @@
+body {
+    font-family: 'Dancing Script', fantasy;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(233, 204, 222);
+    background: rgb(228, 192, 220);
+
+}
+h1{
+    font-size: 35px;
+    color:rgb(231, 6, 126);
+    text-shadow: 2px 2px 5px rgb(253, 252, 253);
+}
+h2{
+    font-size: 30px;
+    color: rgb(183, 0, 168);
+    text-shadow: 5px 5px 10px rgb(255, 254, 255);
+}
+button{
+    background: rgb(255, 145, 0);
+    color:white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+/*I looked at how to draw a star on chatgpt*/
+.star {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+    animation: star 1.5s infinite alternate ease-in-out;
+}
+
+
+@keyframes star {
+    0% {
+        transform: scale(1);       
+    }
+    100% {
+        transform: scale(1.3);      
+    }
+}
+
+.starright {
+    top: 10px;
+    left: 10px;
+}
+
+.starleft {
+    top: 10px;
+    right: 10px;
+}
+
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(234, 118, 56);
+    transform: rotate(-45deg);
+    box-shadow: -5px 5px 50px lightpink;
+    animation: heartBeat 1s infinite alternate, heartGlow 1s infinite alternate;
+  }
+  
+  
+.heart::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(234, 118, 56);
+    box-shadow: lightpink;
+    border-radius: 50%;
+}
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(234, 118, 56);
+    box-shadow: lightpink;
+    border-radius: 50%;
+}
+.heart::before {
+    top: -50%;
+    left: 0;
+}
+.heart::after {
+    top: 0;
+    left: 50%;
+}
+  
+@keyframes heartBeat {
+    0% {
+      transform: rotate(-45deg) scale(1);
+    }
+    100% {
+      transform: rotate(-45deg) scale(1.2);
+    }
+}
+
+@keyframes heartGlow {
+    0% {
+      box-shadow: 0 0 20px rgb(125, 0, 88);
+    }
+    50% {
+      box-shadow: 0 0 200px rgb(125, 0, 88);
+    }
+    100% {
+      box-shadow: 0 0 20px rgb(125, 0, 88);
+    }
+  }
+
+.left {
+    bottom: 10px; 
+    left: 10px;    
+}
+.right {
+    bottom: 10px;
+    right: 10px;   
+}
+ 
+
+
+.magic-bg {
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    background: url('enchantix-picture.png') no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+.winx-container {
+    width: 120px;  
+    cursor: pointer;  
+    position: absolute;  
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    transition: transform 5s ease-in-out;
+    z-index: 10;
+}
+
+#magicTrigger:checked ~ .winx-container {
+    transform: translate(-50%, -200px); 
+}
+ 
+.wing {
+    width: 110px;  
+    height: auto;  
+}
+
+.login-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 5s ease-in-out, visibility 5s ease-in-out;
+    transition-delay: 5s;
+    background: rgba(231, 187, 151, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}
+
+/* for the magicTrigger and keyframes section below
+I got help from chatgpt and edited it according to myself */
+#magicTrigger{
+    display: none;
+}
+#magicTrigger:checked ~ .login-box {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 2.5s;
+}
+
+#magicTrigger:not(:checked) ~ .login-box {
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0s;
+}
+
+#magicTrigger:checked ~ .magic-bg {
+    background: url('winx-club-enchantix.gif') no-repeat center center fixed;
+    background-size: cover;
+    animation: showFinal 6s steps(1, end) forwards;
+}
+
+#magicTrigger:checked ~ .magic-bg::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('enchantix-last-picture.png') no-repeat center center fixed;
+    background-size: cover;
+}
+@keyframes showFinal {
+    100% {
+        background: url('enchantix-last-picture.png') no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+
+#liveClock{
+    font-family: 'Dancing Script', fantasy;
+    font-size: 30px;
+    color: rgb(255, 157, 0);
+    text-shadow: 2px 5px 5px rgb(253, 98, 206);
+    margin-top: 11px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+input {
+    width: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
