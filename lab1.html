@@ -49,8 +49,8 @@
 </body>
 
 <script>
- // I use ChatGPT for this part(How to add clock with javascript) 
- function updateClock() {
+// I use ChatGPT for this part(How to add clock with javascript) 
+function updateClock() {
         const now = new Date();
         const hours = now.getHours().toString().padStart(2, '0');
         const minutes = now.getMinutes().toString().padStart(2, '0');
@@ -66,14 +66,36 @@
         updateClock();
     };
 
-    document.addEventListener("keydown", function(event) {
+    document.addEventListener("DOMContentLoaded", function() {
+    const magicTrigger = document.getElementById("magicTrigger");
+    const magicBg = document.querySelector(".magic-bg");
+
+    magicTrigger.addEventListener("change", function() {
+        if (magicTrigger.checked) {
+          
+            magicBg.style.background = "url('winx-club-enchantix.gif') no-repeat center center fixed";
+            magicBg.style.backgroundSize = "cover";
+        } else {
+         
+            magicBg.style.background = "url('winx-enchantix-end.gif') no-repeat center center fixed";
+            magicBg.style.backgroundSize = "cover";
+
+           
+            setTimeout(() => {
+                magicBg.style.background = "url('enchantix-picture.png') no-repeat center center fixed";
+                magicBg.style.backgroundSize = "cover";
+            }, 4000); 
+        }
+    });
+});
+
+document.addEventListener("keydown", function(event) {
     if (event.key.toLowerCase() === "h") {  
         let magicTrigger = document.getElementById("magicTrigger");
 
         magicTrigger.checked = !magicTrigger.checked;
     }
 });
-
 
 
 
