@@ -15,6 +15,7 @@ h1{
     font-size: 35px;
     color:rgb(231, 6, 126);
     text-shadow: 2px 2px 5px rgb(253, 252, 253);
+
 }
 h2{
     font-size: 30px;
@@ -29,7 +30,7 @@ button{
     font-size: 15px;
 }
 
-/*I looked at how to draw a star on chatgpt*/
+/*yıldız çizmeyi chatgptden baktım*/
 .star {
     position: absolute;
     width: 30px;
@@ -129,7 +130,6 @@ button{
 }
  
 
-
 .magic-bg {
     width: 100%;
     height: 100%;
@@ -157,7 +157,7 @@ button{
 #magicTrigger:checked ~ .winx-container {
     transform: translate(-50%, -200px); 
 }
- 
+
 .wing {
     width: 110px;  
     height: auto;  
@@ -180,10 +180,12 @@ button{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
+
+
 }
 
-/* for the magicTrigger and keyframes section below
-I got help from chatgpt and edited it according to myself */
+/* aşağıdaki magicTrigger ve keyframes kısmını
+chatgptden aldım saniyeleri kendim düzenledim*/
 #magicTrigger{
     display: none;
 }
@@ -213,7 +215,9 @@ I got help from chatgpt and edited it according to myself */
     height: 100%;
     background: url('enchantix-last-picture.png') no-repeat center center fixed;
     background-size: cover;
+   
 }
+
 @keyframes showFinal {
     100% {
         background: url('enchantix-last-picture.png') no-repeat center center fixed;
@@ -221,13 +225,18 @@ I got help from chatgpt and edited it according to myself */
     }
 }
 
-#liveClock{
+#liveClock {
     font-family: 'Dancing Script', fantasy;
-    font-size: 30px;
-    color: rgb(255, 157, 0);
-    text-shadow: 2px 5px 5px rgb(253, 98, 206);
-    margin-top: 11px;
+    font-size: 35px;
+    color: rgb(228, 87, 0);
+    text-shadow: 2px 3px 5px rgb(253, 252, 253);
+    position: absolute;
+    top: 20px;
+    left: 30px;
+  
+
 }
+
 
 form {
     display: flex;
@@ -245,3 +254,4 @@ input {
     outline: none;
     text-align: center;
 }
+

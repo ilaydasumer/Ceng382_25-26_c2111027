@@ -43,14 +43,14 @@
        
         </div>
     </div>
- 
     <div id="liveClock"></div>
+
 
 </body>
 
 <script>
-    // I use ChatGPT for this part(How to add clock with javascript) 
-    function updateClock() {
+ // I use ChatGPT for this part(How to add clock with javascript) 
+ function updateClock() {
         const now = new Date();
         const hours = now.getHours().toString().padStart(2, '0');
         const minutes = now.getMinutes().toString().padStart(2, '0');
@@ -66,22 +66,15 @@
         updateClock();
     };
 
-    // 2. 'H' tuşuna basınca form öğelerini gizleme/gösterme
-    document.addEventListener("keydown", function(event){
+    document.addEventListener("keydown", function(event) {
+    if (event.key.toLowerCase() === "h") {  
+        let magicTrigger = document.getElementById("magicTrigger");
 
-    if (event.key === "h" || event.key === "H"){
-         
-        let forms = document.querySelectorAll("form"); 
-        
-        forms.forEach(form => {
-            if (window.getComputedStyle(form).display === "none") {
-                form.style.display = "block"; // Eğer gizliyse göster
-            } else {
-                form.style.display = "none"; // Eğer görünüyorsa gizle
-            }
-        });
+        magicTrigger.checked = !magicTrigger.checked;
     }
 });
+
+
 
 
 
