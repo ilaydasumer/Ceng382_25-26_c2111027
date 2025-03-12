@@ -6,8 +6,8 @@
     <title>Winx Alfea Login</title>
     <link rel="stylesheet"href="style.css">
 
-    <!I took the following line from chatgpt to be able to
-    use google fonts->
+    <!--  I took the following line from chatgpt to be able to
+    use google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
@@ -19,7 +19,7 @@
         <input type="checkbox" id="magicTrigger">
         
         <div class="winx-container">
-            <label for="magicTrigger">
+             <label for="magicTrigger">
                 <img src="winx_wing.png" alt="winx_wing" class="wing">
             </label>
             
@@ -67,27 +67,27 @@ function updateClock() {
     };
 
     document.addEventListener("DOMContentLoaded", function() {
-    const magicTrigger = document.getElementById("magicTrigger");
-    const magicBg = document.querySelector(".magic-bg");
+        const magicTrigger = document.getElementById("magicTrigger");
+        const magicBg = document.querySelector(".magic-bg");
 
-    magicTrigger.addEventListener("change", function() {
-        if (magicTrigger.checked) {
-          
-            magicBg.style.background = "url('winx-club-enchantix.gif') no-repeat center center fixed";
-            magicBg.style.backgroundSize = "cover";
-        } else {
-         
-            magicBg.style.background = "url('winx-enchantix-end.gif') no-repeat center center fixed";
-            magicBg.style.backgroundSize = "cover";
-
-           
-            setTimeout(() => {
-                magicBg.style.background = "url('enchantix-picture.png') no-repeat center center fixed";
+        magicTrigger.addEventListener("change", function() {
+            debugger;
+            if (magicTrigger.checked) {
+            
+                magicBg.style.background = "url('winx-club-enchantix.gif') no-repeat center center fixed";
                 magicBg.style.backgroundSize = "cover";
-            }, 4000); 
-        }
+            } else {
+
+                magicBg.style.background = "url('winx-enchantix-end.gif') no-repeat center center fixed";
+                magicBg.style.backgroundSize = "cover";
+
+                setTimeout(() => {
+                    magicBg.style.background = "url('enchantix-picture.png') no-repeat center center fixed";
+                    magicBg.style.backgroundSize = "cover";
+                }, 4000); 
+            }
+        });
     });
-});
 
 document.addEventListener("keydown", function(event) {
     if (event.key.toLowerCase() === "h") {  
