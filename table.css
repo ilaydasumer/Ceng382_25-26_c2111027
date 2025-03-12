@@ -1,0 +1,111 @@
+body {
+    font-family: 'Dancing Script', fantasy;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(233, 204, 222);
+    background: rgb(228, 192, 220);
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    font-size: 35px;
+    color: rgb(231, 6, 126);
+    text-shadow: 2px 2px 5px rgb(253, 252, 253);
+    margin-bottom: 20px;
+    font-size: lighter;
+}
+
+/*I looked at the configurations related to the class tables in this section from chatgpt*/
+#classForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#classForm input{
+    width: 250px;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#classForm button {
+    width: 250px;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#classForm input {
+    border: 1px solid #ccc;
+}
+
+#classForm button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#classForm button:hover {
+    background-color: #0056b3;
+}
+
+/* I checked from chatgpt that when the box in the table is clicked it becomes orange and when it is hovered it becomes pink */
+#classTable td:hover {
+    background-color: pink !important;
+    transition: background-color 0.3s ease;
+}
+
+#classTable td.clicked {
+    background-color: orange !important;
+}
+
+#classTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#classTable th, #classTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#classTable th {
+    background-color: #cc00ff;
+    color: white;
+    font-weight: lighter;
+}
+
+#classTable td {
+    background-color: #fff;
+    font-weight: lighter;
+}
+
+#classTable tr:hover {
+    background-color: #f1f1f1;
+    font-weight: lighter;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #d900ff;
+}
+

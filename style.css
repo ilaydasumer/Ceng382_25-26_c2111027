@@ -30,7 +30,7 @@ button{
     font-size: 15px;
 }
 
-/*yıldız çizmeyi chatgptden baktım*/
+/*I looked up how to draw a star from chatgpt*/
 .star {
     position: absolute;
     width: 30px;
@@ -184,8 +184,8 @@ button{
 
 }
 
-/* aşağıdaki magicTrigger ve keyframes kısmını
-chatgptden aldım saniyeleri kendim düzenledim*/
+/* I took the magicTrigger and keyframes part below 
+from chatgpt and edited the seconds myself*/
 #magicTrigger{
     display: none;
 }
@@ -237,6 +237,18 @@ chatgptden aldım saniyeleri kendim düzenledim*/
 
 }
 
+button {
+    background: rgb(255, 145, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(220, 100, 0);
+}
 
 form {
     display: flex;
@@ -254,4 +266,3 @@ input {
     outline: none;
     text-align: center;
 }
-

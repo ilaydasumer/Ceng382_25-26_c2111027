@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Information</title>
+
+<!-- I checked to include the new CSS file from chatgpt -->
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Class Information</h1>
+
+        <form id="classForm">
+            <input type="text" id="className" placeholder="Class Name" required>
+            <input type="number" id="studentCount" placeholder="Number of Students" required>
+            <input type="text" id="description" placeholder="Description" required>
+            <button type="submit">Add Class</button>
+        </form>
+
+        <table id="classTable">
+            <thead>
+                <tr>
+                    <th>Class Name</th>
+                    <th>Number of Students</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+</body>
+
+<script>
+    document.getElementById("classForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const className = document.getElementById("className").value;
+        const studentCount = document.getElementById("studentCount").value;
+        const description = document.getElementById("description").value;
+
+        const tableBody = document.querySelector("#classTable tbody");
+
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+            <td>${className}</td>
+            <td>${studentCount}</td>
+            <td>${description}</td>
+        `;
+        
+        tableBody.appendChild(newRow);
+
+        document.getElementById("classForm").reset();
+    });
+
+    document.querySelector("#classTable tbody").addEventListener("click", function(event) {
+        if (event.target.tagName === "TD") {
+            console.log("Clicked on:", event.target.textContent);
+            event.target.parentElement.style.backgroundColor = "#FFD700";
+        }
+    });
+    
+//I got help from chatgpt for the event related to the click class 
+    document.querySelector("#classTable tbody").addEventListener("click", function(event) {
+    if (event.target.tagName === "TD") {
+         
+        document.querySelectorAll("#classTable td").forEach(td => td.classList.remove("clicked"));
+         
+        event.target.classList.add("clicked");
+    }
+});
+
+
+    document.querySelector("#classTable tbody").addEventListener("dblclick", function(event) {
+        if (event.target.tagName === "TD") {
+            event.target.parentElement.remove();
+        }
+    });
+
+    document.querySelectorAll("input").forEach(input => {
+        input.addEventListener("focus", function() {
+            this.style.backgroundColor = "#FFF3CD";
+        });
+        input.addEventListener("blur", function() {
+            if (!this.value) {
+                this.style.backgroundColor = "";
+            }
+        });
+    });
+
+</script>
+
+</html>

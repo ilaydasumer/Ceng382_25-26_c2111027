@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winx Alfea Login</title>
+  
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container">
+        <input type="checkbox" id="magicTrigger">
+        <div class="winx-container">
+
+            <label for="magicTrigger">
+                <img src="winx_wing.png" alt="winx_wing" class="wing">
+            </label>
+
+        </div>
+
+        <div class="magic-bg"></div>
+
+        <div class="login-box">
+            <div class="star starleft"></div> 
+            <h1>WINX ALFEA MAGIC SCHOOL</h1>
+            <div class="star starright"></div> 
+            <h2>Alfea Login</h2>
+
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Fairy name">
+                <input type="password" id="password" placeholder="Magic Password">
+                <button type="submit">Let's Magic!</button>
+            </form>
+
+            <div class="heart left"></div>
+            <div class="heart right"></div>
+        </div>
+    </div>
+
+    <div id="liveClock"></div>
+
+</body>
+
+<script>
+
+    function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        document.getElementById("liveClock").textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    window.onload = updateClock;
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key.toLowerCase() === "h") {  
+
+            let magicTrigger = document.getElementById("magicTrigger");
+            magicTrigger.checked = !magicTrigger.checked;
+        }
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+        
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        
+        if (username === "admin" && password === "admin") {
+            window.location.href = "table.html";
+        } else {
+        
+            alert("Wrong username or password!"); 
+        }
+   
+   
+    });
+
+</script>
+
+</html>
