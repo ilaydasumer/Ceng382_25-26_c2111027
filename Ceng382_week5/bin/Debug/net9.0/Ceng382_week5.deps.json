@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Ceng382_week5/1.0.0": {
+        "runtime": {
+          "Ceng382_week5.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ceng382_week5/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
