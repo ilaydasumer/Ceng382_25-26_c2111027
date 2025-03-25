@@ -1,3 +1,11 @@
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.AssemblyInfoInputs.cache
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.AssemblyInfo.cs
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.csproj.CoreCompileInputs.cache
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.RazorAssemblyInfo.cache
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.RazorAssemblyInfo.cs
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.sourcelink.json
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\bin\Debug\net9.0\appsettings.json
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.staticwebassets.runtime.json
@@ -7,14 +15,6 @@ C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.runtimeconfig.json
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.dll
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.pdb
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.AssemblyInfoInputs.cache
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.AssemblyInfo.cs
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.csproj.CoreCompileInputs.cache
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.RazorAssemblyInfo.cache
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.RazorAssemblyInfo.cs
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\Ceng382_week5.sourcelink.json
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\scopedcss\bundle\Ceng382_week5.styles.css
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\Ceng382_week5\obj\Debug\net9.0\scopedcss\projectbundle\Ceng382_week5.bundle.scp.css
