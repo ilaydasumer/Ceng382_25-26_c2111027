@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Ceng382_week5</title>
@@ -30,6 +31,7 @@
                 </div>
             </div>
         </nav>
+        @RenderSection("Styles", required: false)
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -50,3 +52,14 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+
+@* I got help from AI to add icons from bootstrap *@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+ 
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
