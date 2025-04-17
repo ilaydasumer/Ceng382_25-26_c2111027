@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Ceng382_week5.Pages;
+namespace Ceng382_week5.Pages{
+    
+}
 
 public class PrivacyModel : PageModel
 {

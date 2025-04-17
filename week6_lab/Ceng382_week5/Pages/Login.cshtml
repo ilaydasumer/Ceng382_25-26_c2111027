@@ -1,0 +1,151 @@
+﻿@page
+@model Ceng382_week5.Pages.LoginModel
+@{
+    ViewData["Title"] = "LOGIN";
+    Layout = "_Layout";
+}
+
+<style> 
+    .login-page {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #ff4d8d, #9d4dff);
+        z-index: -2;
+        overflow: hidden;
+    }
+
+    .glow-effect {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        filter: blur(100px);
+        opacity: 0.6;
+        animation: float 15s infinite alternate;
+    }
+
+    .glow-1 {
+        top: 20%;
+        left: 10%;
+        background: rgba(255, 77, 141, 0.6);
+    }
+
+    .glow-2 {
+        bottom: 15%;
+        right: 10%;
+        background: rgba(157, 77, 255, 0.6);
+        animation-delay: 3s;
+    }
+
+ 
+    .login-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        padding: 2.5rem;
+        max-width: 400px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+ 
+    .form-input {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 12px;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        transition: all 0.3s;
+    }
+
+    .form-input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .form-input:focus {
+        background: rgba(255, 255, 255, 0.2);
+        border-bottom-color: white;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        outline: none;
+    }
+
+ 
+    .login-btn {
+        background: linear-gradient(45deg, #ff4d8d, #9d4dff);
+        border: none;
+        padding: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: white;
+        width: 100%;
+        border-radius: 50px;
+        margin-top: 1rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+        z-index: 1;
+    }
+
+    .login-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(157, 77, 255, 0.4);
+    }
+
+    .login-btn:active {
+        transform: translateY(0);
+    }
+
+    /* Animasyonlar */
+    @@keyframes float {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(20px, 20px); }
+        100% { transform: translate(0, 0); }
+    }
+
+    @@keyframes shine {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+</style>
+
+<div class="login-page">
+    <div class="glow-effect glow-1"></div>
+    <div class="glow-effect glow-2"></div>
+    
+    <div class="container d-flex align-items-center min-vh-100 py-5">
+        <div class="login-card">
+            <div class="text-center mb-4">
+                <h2 class="text-white">LOGIN</h2>
+            </div>
+            
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-danger">@Model.ErrorMessage</div>
+            }
+            
+            <form method="post">
+                <div class="mb-3">
+                    <input asp-for="Username" class="form-input" placeholder="Username" required>
+                </div>
+                
+                <div class="mb-3">
+                    <input asp-for="Password" type="password" class="form-input" placeholder="Password" required>
+                </div>
+                
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe" asp-for="RememberMe">
+                    <label class="form-check-label text-white" for="rememberMe">Remember me!</label>
+                </div>
+                
+                <button type="submit" class="login-btn">LOGIN</button>
+            </form>
+        </div>
+    </div>
+</div>

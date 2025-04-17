@@ -11,11 +11,13 @@
     {
         public class IndexModel : PageModel
         {
+            [BindProperty(SupportsGet = true)]
+            public string? ClassNameFilter { get; set; }  
+
             private static List<ClassInformationModel> Classes = new List<ClassInformationModel>();
             private static int NextId = 1;
 
-            [BindProperty(SupportsGet = true)]
-            public string ClassNameFilter { get; set; }
+         
 
             [BindProperty(SupportsGet = true)]
             public int? MinStudentCount { get; set; }
@@ -178,7 +180,7 @@ public IActionResult OnGetExportFiltered(string selectedColumns)
 }            private IActionResult ExportJson(IEnumerable<ClassInformationTable> data, string[] selectedColumns){
         object jsonData;
 
-        if (selectedColumns != null && selectedColumns.Length > 0)
+            if (selectedColumns != null && selectedColumns.Length > 0)
         {
             var filteredData = new List<ExpandoObject>();
             foreach (var item in data)
@@ -189,12 +191,13 @@ public IActionResult OnGetExportFiltered(string selectedColumns)
                 foreach (var prop in selectedColumns)
                 {
                     var value = item.GetType().GetProperty(prop)?.GetValue(item);
-                    dict.Add(prop, value);
+                    if (value != null)  
+                    {
+                        dict.Add(prop, value);
+                    }
                 }
-
                 filteredData.Add(expando);
             }
-
             jsonData = filteredData;
         }
         else
@@ -202,11 +205,12 @@ public IActionResult OnGetExportFiltered(string selectedColumns)
             jsonData = data;
         }
 
-        var json = JsonSerializer.Serialize(jsonData, new JsonSerializerOptions { WriteIndented = true });
+        var json = JsonSerializer.Serialize(jsonData, new JsonSerializerOptions { 
+            WriteIndented = true,
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        });
         return Content(json, "application/json");
-        
-        }
-        }
+    }
 
 
  
@@ -233,3 +237,4 @@ public IActionResult OnGetExportFiltered(string selectedColumns)
             }
         }
     }
+}

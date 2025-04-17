@@ -1237,8 +1237,8 @@ C:\Users\ilayd\OneDrive\Masaüstü\Cankaya University\3.sınıf\2.donem\ceng382_
 C:\Users\ilayd\OneDrive\Masaüstü\Cankaya University\3.sınıf\2.donem\ceng382_lablar\week6_lab\Ceng382_week5\obj\Debug\net9.0\ref\Ceng382_week5.dll
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\bin\Debug\net9.0\appsettings.json
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.staticwebassets.endpoints.json
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.staticwebassets.runtime.json
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.staticwebassets.endpoints.json
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.exe
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.deps.json
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\bin\Debug\net9.0\Ceng382_week5.runtimeconfig.json
@@ -1775,7 +1775,8 @@ C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\obj\Debug\net9.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\obj\Debug\net9.0\scopedcss\bundle\Ceng382_week5.styles.css
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\obj\Debug\net9.0\scopedcss\projectbundle\Ceng382_week5.bundle.scp.css
-C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\obj\Debug\net9.0\compressed\s1ri6n80yx-4wcnwldyda.gz
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\obj\Debug\net9.0\compressed\s1ri6n80yx-3a7ahdt68d.gz
+C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\obj\Debug\net9.0\compressed\jie3mjucf0-j1dafqthqj.gz
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\obj\Debug\net9.0\compressed\avu7b8quie-61n19gt1b8.gz
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\obj\Debug\net9.0\compressed\9as8ka28vm-xtxxf3hu2r.gz
 C:\Users\ilayd\OneDrive\Masaüstü\Ceng382\Ceng382_25-26_c2111027\week6_lab\Ceng382_week5\obj\Debug\net9.0\compressed\1s5mp2dqoh-bqjiyaj88i.gz
