@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ceng382_week5.props" />
+</Project>

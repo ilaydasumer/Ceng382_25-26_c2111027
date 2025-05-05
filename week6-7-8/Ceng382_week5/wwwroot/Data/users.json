@@ -1,0 +1,12 @@
+[
+    {
+      "Username": "admin",
+      "Password": "admin123",
+      "IsActive": true
+    },
+    {
+      "Username": "user",
+      "Password": "user123",
+      "IsActive": true
+    }
+  ]
