@@ -242,6 +242,8 @@
         </div>
     </div>
 </div>
+
+@* I got some helps from AI for this part *@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
@@ -256,8 +258,7 @@
                         .forEach(el => el.classList.toggle('column-selected', this.checked));
                 });
             });
-
-            // Export butonları
+ 
             document.getElementById('exportAllBtn').addEventListener('click', function () {
                 exportData(false);
             });
@@ -267,19 +268,18 @@
             });
         });
 
-        // 🧠 Fonksiyonları dışarı taşı
+ 
         function getColumnIndex(columnName) {
             const columns = ['ClassName', 'StudentCount', 'Description'];
             return columns.indexOf(columnName) + 2; // +2 çünkü ID 1. kolonda
         }
-
-        // Formu göndermek için
+ 
         function submitForm(handlerName) {
             const form = document.getElementById("classForm");
             const className = document.getElementById('NewClass_ClassName').value;
             const studentCount = document.getElementById('NewClass_StudentCount').value;
             const description = document.querySelector('textarea[name="NewClass.Description"]').value;
-        // Eğer herhangi bir alan değiştirilmişse, formu gönder
+        
             if (className || studentCount || description) {
                 const url = new URL(window.location.href);
                 const baseUrl = url.pathname;
@@ -287,14 +287,14 @@
                 form.action = `${baseUrl}?handler=${handlerName}`;
                 form.submit();
                 
-                // Sayfayı yeniden yükle
+                
                 location.reload(); 
             } else {
                 alert('Hiçbir değişiklik yapılmadı.');
             }
         }
 
-        // Veriyi dışa aktarmak için
+ 
         async function exportData(filtered) {
             try {
                 const selectedColumns = [];
@@ -339,7 +339,7 @@
             }
         }
 
-        // Edit butonunun düzgün tanımı
+    
         function editClass(id) {
             console.log("Edit butonuna tıklandı, ID:", id);
 

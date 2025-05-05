@@ -22,31 +22,30 @@ namespace Ceng382_week5.Pages
             _context = context;
         }
 
-        // Properties for data display
+      
         public PaginatedList<ClassInformationModel> PaginatedClasses { get; set; }
         public IList<ClassInformationModel> ClassList { get; set; }
 
-        // Filter properties
+   
         [BindProperty(SupportsGet = true)]
         public string ClassNameFilter { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public int? MinStudentCount { get; set; }
-
-        // Form model properties
+ 
         [BindProperty]
         public ClassInformationModel NewClass { get; set; } = new ClassInformationModel();
 
         [BindProperty]
         public int EditId { get; set; }
 
-        // Pagination settings
+       
         public int PageSize { get; set; } = 5;
 
         public async Task OnGetAsync(int? pageIndex, int? id)
         {
             IQueryable<ClassInformationModel> query = _context.Classes;
-             // Edit modunda ise ilgili kaydı yükle
+             
             if (id.HasValue)
             {
                 EditId = id.Value;
@@ -56,7 +55,7 @@ namespace Ceng382_week5.Pages
                     NewClass = classToEdit;
                 }
             }
-            // Apply filters
+ 
             if (!string.IsNullOrEmpty(ClassNameFilter))
             {
                 query = query.Where(c => c.ClassName.Contains(ClassNameFilter));
@@ -122,64 +121,62 @@ namespace Ceng382_week5.Pages
 public async Task<IActionResult> OnPostEditClassAsync(int id)
 {
     Console.WriteLine($"OnPostEditClassAsync çağrıldı, id: {id}");
-    // Veritabanından güncellenmek istenen sınıfı al
+    // Get the class you want to update from the database
     var classToUpdate = await _context.Classes
         .FirstOrDefaultAsync(c => c.Id == id);
 
     if (classToUpdate == null)
     {
-        // Eğer sınıf bulunamazsa, hata mesajı dönebiliriz
+         
         return NotFound();
     }
      Console.WriteLine($"Yeni Sınıf Adı: {NewClass.ClassName}, Öğrenci Sayısı: {NewClass.StudentCount}");
 
 
-    // Verileri güncelle
+ 
     classToUpdate.ClassName = NewClass.ClassName;
     classToUpdate.StudentCount = NewClass.StudentCount;
     classToUpdate.Description = NewClass.Description;
 
-    // Değişiklikleri kaydet
+     
     _context.Classes.Update(classToUpdate);
     await _context.SaveChangesAsync();
-
-    // Sayfayı yeniden yükle
-    return RedirectToPage();  // Sayfa yeniden yüklenir
+ 
+    return RedirectToPage();   
 }
 public IActionResult OnPostEdit(int id, string className, int studentCount, string description)
 {
     var classToUpdate = _context.Classes.FirstOrDefault(c => c.Id == id);
     if (classToUpdate == null) return NotFound();
 
-    // Değişen alanları güncelle
+ 
     if (!string.IsNullOrEmpty(className)) classToUpdate.ClassName = className;
     if (studentCount > 0) classToUpdate.StudentCount = studentCount;
     if (!string.IsNullOrEmpty(description)) classToUpdate.Description = description;
 
-    // Değişiklikleri kaydet
+ 
     _context.SaveChanges();
 
-    return RedirectToPage("./Index"); // İlgili sayfaya yönlendir
+    return RedirectToPage("./Index"); 
 }
 
 
        public async Task<IActionResult> OnPostEditAsync()
         {
-            // Model doğrulama kontrolü
+           
             if (!ModelState.IsValid)
             {
-                // Eğer form hatalıysa, sayfayı güncelle ve mevcut veriyi geri yükle
+                
                 await OnGetAsync(1, EditId); 
                 return Page();
             }
-
-            // Güncelleme yapılacak sınıfı veritabanından bul
+ 
             var classToEdit = await _context.Classes.FindAsync(EditId);
 
-            // Eğer sınıf bulunmuşsa
+        
             if (classToEdit != null)
             {
-                // Formdan alınan yeni değerlerle sınıfı güncelle
+                
                 classToEdit.ClassName = NewClass.ClassName;
                 classToEdit.StudentCount = NewClass.StudentCount;
                 classToEdit.Description = NewClass.Description;
@@ -187,24 +184,24 @@ public IActionResult OnPostEdit(int id, string className, int studentCount, stri
 
                 try
                 {
-                    // Veritabanını kaydet
+                    //save from the db
                     await _context.SaveChangesAsync();
                 }
                 catch (Exception ex)
                 {
-                    // Hata durumunda mesaj göster
+                   
                     ModelState.AddModelError(string.Empty, $"Error updating class: {ex.Message}");
                     return Page();
                 }
             }
             else
             {
-                // Eğer sınıf bulunamazsa hata mesajı göster
+                // send error message
                 ModelState.AddModelError(string.Empty, "Class not found.");
                 return Page();
             }
 
-            // Güncelleme başarılı ise, ana sayfaya yönlendir
+ 
             return RedirectToPage("./Index"); 
         }
 
@@ -222,13 +219,7 @@ public IActionResult OnPostEdit(int id, string className, int studentCount, stri
 
         public async Task<IActionResult> OnPostReorderAsync()
         {
-            // var classes = await _context.Classes.OrderBy(c => c.DisplayOrder).ToListAsync();
-            
-            // // for (int i = 0; i < classes.Count; i++)
-            // {
-            //     classes[i].DisplayOrder = i + 1;
-            // }
-
+        
             await _context.SaveChangesAsync();
             return RedirectToPage();
         }
